@@ -1,0 +1,16 @@
+{
+  "private": "true",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc --target esnext --outDir dist main.ts",
+    "version": "node --eval \"import { version } from './makefile.js'; version();\" --input-type module"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "typescript": "^5.1.3"
+  },
+  "engines": {
+    "node": ">=20.2.0",
+    "pnpm": ">=8.6.0"
+  }
+}
