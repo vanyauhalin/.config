@@ -1,0 +1,18 @@
+set -gx PATH $PATH /sbin /usr/local/bin /usr/sbin
+
+__xdg_set_environment
+__xdg_backport_data_home
+
+__bash_set_environment
+__brew_set_environment
+__docker_set_environment
+__fish_set_environment
+__javascript_set_environment
+__less_set_environment
+__python_set_environment
+
+__ruby_set_environment
+__ruby_use_on_cd
+
+__subversion_set_environment
+__swift_set_environment
