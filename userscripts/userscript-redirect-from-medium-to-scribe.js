@@ -1,0 +1,1 @@
+userscript-redirect-from-medium-to-scribe/dist/main.js

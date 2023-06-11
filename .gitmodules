@@ -1,0 +1,12 @@
+[submodule "fish"]
+	path = fish
+	url = https://github.com/vanyauhalin/fish-config
+[submodule "userscripts/userscript-expand-youtube-description"]
+	path = userscripts/userscript-expand-youtube-description
+	url = https://github.com/vanyauhalin/userscript-expand-youtube-description
+[submodule "userscripts/userscript-redirect-from-medium-to-scribe"]
+	path = userscripts/userscript-redirect-from-medium-to-scribe
+	url = https://github.com/vanyauhalin/userscript-redirect-from-medium-to-scribe
+[submodule "userscripts/userscript-redirect-from-wikipedia-to-wikiwand"]
+	path = userscripts/userscript-redirect-from-wikipedia-to-wikiwand
+	url = https://github.com/vanyauhalin/userscript-redirect-from-wikipedia-to-wikiwand
