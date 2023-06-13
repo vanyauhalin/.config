@@ -98,11 +98,14 @@ function fish_right_prompt
 		set promt $promt $colored_code
 		set duration_color red
 	else
-		set duration_color black
+		set duration_color normal
 	end
 
 	if test -n $duration
-		set colored_duration (set_color -d $duration_color)$duration(set_color normal)
+		# Don't merge the two first set_color functions; otherwise, dim mode won't
+		# work with normal color.
+		set colored_duration \
+			(set_color $duration_color)(set_color -d)$duration(set_color normal)
 		set promt $promt $colored_duration
 	end
 
