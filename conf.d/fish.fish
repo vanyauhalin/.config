@@ -2,6 +2,11 @@ function __fish_set_environment
 	set -g fish_greeting
 end
 
+function fish_title
+	# Don't remove this function; it serves as a placeholder to keep the title
+	# window empty.
+end
+
 function fish_prompt
 	set -l pwd (__promt_pwd)
 	set -l git (__promt_git)
