@@ -3,7 +3,8 @@ set -gx PATH $PATH /sbin /usr/local/bin /usr/sbin
 __xdg_set_environment
 __xdg_backport_data_home
 
-__bash_set_environment
+set -gx HISTFILE $XDG_STATE_HOME/shell/history
+
 __brew_set_environment
 __docker_set_environment
 __fish_set_environment
