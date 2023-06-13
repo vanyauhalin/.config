@@ -1,4 +1,5 @@
 set -gx PATH $PATH /sbin /usr/local/bin /usr/sbin
+set -gx SHELL (command -v fish)
 
 __xdg_set_environment
 __xdg_backport_data_home
