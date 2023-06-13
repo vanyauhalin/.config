@@ -1,3 +1,3 @@
 function __brew_set_environment
-	eval (brew shellenv)
+	eval (command brew shellenv)
 end

@@ -43,7 +43,7 @@ function __git_clean_recursive --description ""
 		set directory (string replace /.git "" $repository)
 		if test -d $directory
 			echo $directory
-			$SHELL -c "cd $directory; git clean -dfX"
+			command $SHELL -c "cd $directory; git clean -dfX"
 			echo ""
 		end
 	end
@@ -66,5 +66,5 @@ function __git_undo --description "Undo the last commit"
 end
 
 function __git_update --description "Update remote origins"
-	git remote update origin --prune
+	command git remote update origin --prune
 end
