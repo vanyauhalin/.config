@@ -1,5 +1,5 @@
 function env
-	if test -n $argv
+	if test -n "$argv"
 		command env | sort
 		return
 	end
