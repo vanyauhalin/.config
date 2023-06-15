@@ -22,5 +22,5 @@ function __ruby_set_environment
 end
 
 function __ruby_use_on_cd
-	status --is-interactive; and command rbenv init - $SHELL | source
+	status --is-interactive; and command rbenv init - fish | source
 end

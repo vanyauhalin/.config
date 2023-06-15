@@ -43,7 +43,7 @@ function __git_clean_recursive --description ""
 		set directory (string replace /.git "" $repository)
 		if test -d $directory
 			echo $directory
-			command $SHELL -c "cd $directory; git clean -dfX"
+			command fish -c "cd $directory; git clean -dfX"
 			echo ""
 		end
 	end
