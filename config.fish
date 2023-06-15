@@ -6,9 +6,9 @@ __xdg_backport_data_home
 
 set -gx HISTFILE $XDG_STATE_HOME/shell/history
 
-__brew_set_environment
 __docker_set_environment
 __fish_set_environment
+__homebrew_set_environment
 __javascript_set_environment
 __less_set_environment
 __python_set_environment
