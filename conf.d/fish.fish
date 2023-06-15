@@ -91,21 +91,17 @@ function fish_right_prompt
 	end
 
 	set -l promt
-	set -l duration_color
+
+	# Don't merge the two first set_color functions; otherwise, dim mode won't
+	# work with normal color.
 
 	if test $code -gt 0
-		set colored_code (set_color -d red)$code(set_color normal)
+		set colored_code (set_color normal)(set_color -d)$code(set_color normal)
 		set promt $promt $colored_code
-		set duration_color red
-	else
-		set duration_color normal
 	end
 
 	if test -n $duration
-		# Don't merge the two first set_color functions; otherwise, dim mode won't
-		# work with normal color.
-		set colored_duration \
-			(set_color $duration_color)(set_color -d)$duration(set_color normal)
+		set colored_duration (set_color normal)(set_color -d)$duration(set_color normal)
 		set promt $promt $colored_duration
 	end
 
