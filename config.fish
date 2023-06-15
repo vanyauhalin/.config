@@ -16,5 +16,6 @@ __python_set_environment
 __ruby_set_environment
 __ruby_use_on_cd
 
+__shell_gpt_set_environment
 __subversion_set_environment
 __swift_set_environment
