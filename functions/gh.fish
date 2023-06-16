@@ -2,8 +2,9 @@ function gh
 	set -l options h/help
 	argparse -i $options -- $argv
 
-	if set -q _flag_help
-		__gh_help_message
+	if set -q _flag_help; and test (count $argv) -eq 0
+		command gh $argv
+		__help_message gh
 		return
 	end
 
@@ -13,17 +14,4 @@ function gh
 	case \*
 		command gh $argv
 	end
-end
-
-function __gh_help_message
-	command gh $_flag_help
-	echo ""
-	echo "Additional subcommands:"
-	echo "  gh init  $(__description __gh_init)"
-end
-
-function __gh_init --description "Initialize and create a new repository with an empty commit"
-	command git init
-	command git commit --allow-empty -m "Initialize repository"
-	command gh repo create
 end
