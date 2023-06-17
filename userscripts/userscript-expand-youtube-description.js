@@ -1,1 +1,0 @@
-userscript-expand-youtube-description/dist/main.js
