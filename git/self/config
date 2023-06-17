@@ -1,0 +1,12 @@
+[core]
+excludesFile = ~/.config/git/self/ignore
+
+[diff]
+external = difft
+
+[init]
+defaultBranch = main
+
+[user]
+name = vanyauhalin
+email = vanyauhalin@gmail.com
