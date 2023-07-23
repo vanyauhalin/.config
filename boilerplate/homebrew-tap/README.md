@@ -11,4 +11,4 @@ Feel free to remind me in [issues](https://github.com/vanyauhalin/homebrew-PACKA
 
 ## License
 
-The formula is distributed under the [MIT License](./License).
+The formula is distributed under the [MIT License](./LICENSE).
