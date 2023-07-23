@@ -2,4 +2,4 @@
 
 ## License
 
-The configurations is distributed under the [MIT License](./License).
+The configurations is distributed under the [MIT License](./LICENSE).
