@@ -62,6 +62,7 @@ def aliases
 
   state.each_value do |_, output_basename, intput_basename|
     output = output_directory.join(output_basename)
+    output.delete if output.exist?
     input = input_directory.join(intput_basename)
     output.make_symlink(input)
   end
