@@ -13,6 +13,8 @@ def aliases
   current_directory = Pathname.new(__dir__)
 
   input_directory = current_directory.join("Formula")
+  input_directory.mkdir(0o700) unless input_directory.exist?
+
   input_directory.entries.each do |file|
     matched = file.basename.to_s.match(/([\S\s]*)@([\S\s]*)\.rb/)
     next unless matched
@@ -56,6 +58,8 @@ def aliases
   end
 
   output_directory = current_directory.join("Aliases")
+  output_directory.mkdir(0o700) unless output_directory.exist?
+
   state.each_value do |_, output_basename, intput_basename|
     output = output_directory.join(output_basename)
     input = input_directory.join(intput_basename)
