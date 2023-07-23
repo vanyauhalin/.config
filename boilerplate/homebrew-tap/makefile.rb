@@ -14,7 +14,7 @@ def aliases
 
   input_directory = current_directory.join("Formula")
   input_directory.entries.each do |file|
-    matched = file.basename.to_s.match(/([\S\s]*)@([\S\s]*)/)
+    matched = file.basename.to_s.match(/([\S\s]*)@([\S\s]*)\.rb/)
     next unless matched
 
     matched_name = matched[1]
@@ -30,7 +30,7 @@ def aliases
       state[""] = [
         version,
         matched_name,
-        "#{matched_name}@#{version}"
+        "#{matched_name}@#{version}.rb"
       ]
     end
 
@@ -40,7 +40,7 @@ def aliases
       state[string_major] = [
         version,
         "#{matched_name}@#{string_major}",
-        "#{matched_name}@#{version}"
+        "#{matched_name}@#{version}.rb"
       ]
     end
 
@@ -50,7 +50,7 @@ def aliases
       state[string_minor] = [
         version,
         "#{matched_name}@#{string_minor}",
-        "#{matched_name}@#{version}"
+        "#{matched_name}@#{version}.rb"
       ]
     end
   end
