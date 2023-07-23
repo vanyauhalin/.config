@@ -64,7 +64,8 @@ def aliases
     output = output_directory.join(output_basename)
     output.delete if output.exist?
     input = input_directory.join(intput_basename)
-    output.make_symlink(input)
+    relative_input = input.relative_path_from(output_directory)
+    output.make_symlink(relative_input)
   end
 end
 
