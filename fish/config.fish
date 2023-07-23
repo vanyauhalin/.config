@@ -1,21 +1,7 @@
-set -gx PATH $PATH /sbin /usr/local/bin /usr/sbin
-set -gx SHELL (command -v fish)
+fish_add_path /sbin /usr/local/bin /usr/sbin
 
-__xdg_set_environment
-__xdg_backport_data_home
+set --global fish_greeting
+set --export --global SHELL (command -v fish)
+set --export --global HISTFILE $XDG_STATE_HOME/shell/history
 
-set -gx HISTFILE $XDG_STATE_HOME/shell/history
-
-__docker_set_environment
-__fish_set_environment
-__homebrew_set_environment
-__javascript_set_environment
-__less_set_environment
-__python_set_environment
-
-__ruby_set_environment
-__ruby_use_on_cd
-
-__shell_gpt_set_environment
-__subversion_set_environment
-__swift_set_environment
+__fisher_autoload

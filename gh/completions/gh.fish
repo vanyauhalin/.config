@@ -1,0 +1,5 @@
+complete \
+	--command gh \
+	--condition __fish_use_subcommand \
+	--arguments init \
+	--description "Initialize a new repository"
