@@ -3,10 +3,15 @@ function git
 	case "" -h --help
 		command git $argv
 		echo ""
-		echo "Additional subcommands:"
+		echo "----------------------"
+		echo ""
+		echo "Usage: remote-rename <current> <new>"
+		echo ""
+		echo "Subcommands:"
 		echo "  clean-recursive     ."
 		echo "  init                Initialize a new repository with an empty commit."
 		echo "  log-diff            Print humanized differences in logs."
+		echo "  remote-rename       Rename remote origin and local branches."
 		echo "  remote-update       Update remote origin."
 		echo "  s                   Show the working tree status."
 		echo "  show-diff           Print humanized differences in objects."
@@ -32,6 +37,24 @@ function git
 
 	case log-diff
 		command git log --ext-diff --patch
+
+	case "remote-rename*"
+		if not set --query argv[2]
+			echo "Error: The current name of the branch is not specified."
+			return 1
+		end
+		set --local current $argv[2]
+
+		if not set --query argv[3]
+			echo "Error: The new name of the branch is not specified."
+			return 1
+		end
+		set --local new $argv[3]
+
+		command git branch --unset-upstream $current
+		command git push origin --delete $current
+		command git branch --move $current $new
+		command git push --set-upstream origin $new
 
 	case remote-update
 		command git remote update origin --prune

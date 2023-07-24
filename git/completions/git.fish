@@ -16,6 +16,11 @@ complete \
 complete \
 	--command git \
 	--condition __fish_use_subcommand \
+	--arguments remote-rename \
+	--description "Rename remote origin and local branches"
+complete \
+	--command git \
+	--condition __fish_use_subcommand \
 	--arguments remote-update \
 	--description "Update remote origin"
 complete \
