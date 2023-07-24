@@ -7,10 +7,10 @@ function git
 		echo "  clean-recursive     ."
 		echo "  init                Initialize a new repository with an empty commit."
 		echo "  log-diff            Print humanized differences in logs."
+		echo "  remote-update       Update remote origin."
 		echo "  s                   Show the working tree status."
 		echo "  show-diff           Print humanized differences in objects."
 		echo "  undo                Undo the last commit."
-		echo "  update              Update remote origins."
 		if test -z "$argv"
 			return 1
 		end
@@ -33,6 +33,9 @@ function git
 	case log-diff
 		command git log --ext-diff --patch
 
+	case remote-update
+		command git remote update origin --prune
+
 	case s
 		command git status
 
@@ -41,9 +44,6 @@ function git
 
 	case undo
 		command git reset --soft HEAD~1
-
-	case update
-		command git remote update origin --prune
 
 	case \*
 		command git $argv

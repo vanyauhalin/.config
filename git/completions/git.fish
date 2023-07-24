@@ -16,6 +16,11 @@ complete \
 complete \
 	--command git \
 	--condition __fish_use_subcommand \
+	--arguments remote-update \
+	--description "Update remote origin"
+complete \
+	--command git \
+	--condition __fish_use_subcommand \
 	--arguments s \
 	--description "Show the working tree status"
 complete \
@@ -28,8 +33,3 @@ complete \
 	--condition __fish_use_subcommand \
 	--arguments undo \
 	--description "Undo the last commit"
-complete \
-	--command git \
-	--condition __fish_use_subcommand \
-	--arguments update \
-	--description "Update remote origins"
