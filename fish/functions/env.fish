@@ -1,8 +1,8 @@
 function env
-	if test -z "$argv"
+	switch "$argv"
+	case ""
 		command env | sort
-		return
+	case \*
+		command env $argv
 	end
-
-	command env $argv
 end
