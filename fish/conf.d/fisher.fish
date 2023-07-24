@@ -7,3 +7,18 @@ function __fisher_autoload
 		source $file
 	end
 end
+
+function __fisher_find_completion
+	set --local command $argv[1]
+	set --local basename (string join "" $command ".fish")
+
+	for path in $fish_complete_path
+		set --local ignore (string match --entire $fisher_path $path)
+		if not test $ignore
+			set --local file (string join / $path $basename)
+			if test -e $file
+				source $file
+			end
+		end
+	end
+end

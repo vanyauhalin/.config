@@ -1,3 +1,5 @@
+__fisher_find_completion git
+
 complete \
 	--command git \
 	--condition __fish_use_subcommand \
