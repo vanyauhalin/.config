@@ -6,7 +6,7 @@
 // @icon         https://icons.duckduckgo.com/ip3/youtube.com.ico
 // @author       Ivan Uhalin <vanyauhalin@gmail.com>
 // @homepage     https://github.com/vanyauhalin/userscript-expand-youtube-description/blob/v0.1.0
-// @match        https://www.youtube.com/watch
+// @match        https://www.youtube.com/watch*
 // @run-at       document-body
 // ==/UserScript==
 
