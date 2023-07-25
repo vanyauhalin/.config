@@ -1,0 +1,14 @@
+/* ==UserStyle==
+@name        Hide YouTube Avatars
+@description Hide YouTube avatars on the subscriptions page with two-column
+@match       https://www.youtube.com/feed/subscriptions
+@run-at      document-start
+==/UserStyle== */
+
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer
+ytd-shelf-renderer
+.grid-subheader {
+  display: none !important;
+}

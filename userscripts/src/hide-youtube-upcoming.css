@@ -1,0 +1,14 @@
+/* ==UserStyle==
+@name        Hide YouTube Upcoming
+@description Hide upcoming YouTube videos on the subscriptions page with two-column
+@match       https://www.youtube.com/feed/subscriptions
+@run-at      document-start
+==/UserStyle== */
+
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(
+  ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]
+) {
+  display: none !important;
+}

@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name        Hide YouTube Shorts
+@description Hide YouTube shorts on the subscriptions page with two-column
+@match       https://www.youtube.com/feed/subscriptions
+@run-at      document-start
+==/UserStyle== */
+
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(
+  ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]
+) {
+  display: none !important;
+}
+
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(
+  yt-horizontal-list-renderer
+) {
+  display: none !important;
+}

@@ -1,0 +1,42 @@
+/* ==UserStyle==
+@name        Hide YouTube Watched
+@description Hide watched YouTube videos on the subscriptions page with two-column
+@match       https://www.youtube.com/feed/subscriptions
+@run-at      document-start
+==/UserStyle== */
+
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(#progress[style*="90"]),
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(#progress[style*="91"]),
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(#progress[style*="92"]),
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(#progress[style*="93"]),
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(#progress[style*="94"]),
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(#progress[style*="95"]),
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(#progress[style*="96"]),
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(#progress[style*="97"]),
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(#progress[style*="98"]),
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(#progress[style*="99"]),
+ytd-browse
+ytd-two-column-browse-results-renderer
+ytd-item-section-renderer:has(#progress[style*="100"]) {
+  display: none !important;
+}
