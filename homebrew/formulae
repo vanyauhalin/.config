@@ -1,0 +1,28 @@
+act 0.2.48
+bzip2 1.0.8
+composer 2.5.8
+d12frosted/emacs-plus/emacs-plus@28
+difftastic 0.48.0
+fisher 4.4.3
+gh 2.32.1
+git 2.41.0_2
+go 1.20.6
+libarchive 3.6.2_1
+libiconv 1.17
+libmagic 5.44
+nghttp2 1.55.1
+node 20.5.0
+phpbrew 2.1.0
+pnpm 8.6.10
+pyenv 2.3.23
+rbenv 1.2.0
+rust 1.70.0
+sdkman/tap/sdkman-cli
+swiftlint 0.52.4
+tmux 3.3a_2
+vanyauhalin/osub/osub
+vanyauhalin/shell_gpt/shell_gpt@0.9.4
+vanyauhalin/tuist/tuist@3.21.1
+watchman 2023.07.24.00
+woff2 1.0.2
+xdg-ninja 0.2.0.1
