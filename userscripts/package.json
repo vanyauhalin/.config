@@ -1,9 +1,6 @@
 {
   "private": "true",
   "type": "module",
-  "scripts": {
-    "compile": "tsc --target esnext --outDir dist src/*.ts"
-  },
   "devDependencies": {
     "@types/node": "^20.2.5",
     "typescript": "^5.1.3"
