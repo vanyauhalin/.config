@@ -1,14 +1,15 @@
 function brew
 	switch "$argv"
-	case "" -h --help
+	case ""
+		brew --help
+		return 1
+
+	case -h --help
 		command brew $argv
 		echo ""
 		echo "Additional subcommands:"
 		echo "  export              Export lists of manually installed formulae and casks."
 		echo "  yolo                Run update, upgrade, autoremove and cleanup."
-		if test -z "$argv"
-			return 1
-		end
 
 	case autoremove cleanup "install*" "tap*" "uninstall*" "untap*" update "upgrade*"
 		command brew $argv

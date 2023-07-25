@@ -1,13 +1,14 @@
 function gh
 	switch "$argv"
-	case "" -h --help
+	case ""
+		gh --help
+		return 1
+
+	case -h --help
 		command gh $argv
 		echo ""
 		echo "Additional subcommands:"
 		echo "  init                Initialize a new repository."
-		if test -z "$argv"
-			return 1
-		end
 
 	case init
 		git init

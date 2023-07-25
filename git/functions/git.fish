@@ -1,6 +1,10 @@
 function git
 	switch "$argv"
-	case "" -h --help
+	case ""
+		git --help
+		return 1
+
+	case -h --help
 		command git $argv
 		echo ""
 		echo "----------------------"
@@ -16,9 +20,6 @@ function git
 		echo "  s                   Show the working tree status."
 		echo "  show-diff           Print humanized differences in objects."
 		echo "  undo                Undo the last commit."
-		if test -z "$argv"
-			return 1
-		end
 
 	case clean-recursive
 		set repositories $(command find . -name .git | command sort)
