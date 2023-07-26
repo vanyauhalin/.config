@@ -1,0 +1,216 @@
+// https://github.com/microsoft/vscode/issues/46403
+// https://github.com/microsoft/vscode/issues/56174
+
+{
+  "breadcrumbs.enabled": false,
+  "codesnap.boxShadow": "rgba(0, 0, 0, 0.2) 0px 18px 42px",
+  "codesnap.containerPadding": "22px",
+  "codesnap.showWindowControls": false,
+  "cSpell.customDictionaries": {
+    "shared": {
+      "name": "shared",
+      "path": "/Users/vanyauhalin/.config/shared/dictionary",
+      "scope": "user",
+      "addWords": true
+    }
+  },
+  "cSpell.language": "en,ru",
+  "color-highlight.markRuler": false,
+  "debug.openDebug": "neverOpen",
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.codeLens": false,
+  "editor.cursorBlinking": "solid",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontFamily": "Source Code Pro, Menlo",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 12,
+  "editor.fontWeight": "400",
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": false,
+  "editor.guides.highlightActiveBracketPair": false,
+  "editor.guides.highlightActiveIndentation": false,
+  "editor.guides.indentation": false,
+  "editor.inlineSuggest.enabled": true,
+  "editor.language.colorizedBracketPairs": [],
+  "editor.letterSpacing": 0.5,
+  "editor.lightbulb.enabled": false,
+  "editor.linkedEditing": true,
+  "editor.matchBrackets": "never",
+  "editor.minimap.enabled": false,
+  "editor.mouseWheelScrollSensitivity": 0.26,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.padding.bottom": 200,
+  "editor.padding.top": 2,
+  "editor.renderLineHighlight": "all",
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    {
+      "column": 80
+    }
+  ],
+  "editor.scrollbar.horizontalScrollbarSize": 8,
+  "editor.scrollbar.verticalScrollbarSize": 8,
+  "editor.scrollBeyondLastColumn": 0,
+  "editor.scrollBeyondLastLine": false,
+  "editor.smoothScrolling": true,
+  "editor.snippetSuggestions": "none",
+  "editor.suggest.showIcons": false,
+  "editor.suggestSelection": "first",
+  // In some cases, EditorConfig doesn't load or loads with a delay.
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 100,
+  "editor.wrappingIndent": "indent",
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.expand": false,
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.erb": "html",
+    "*.mdx": "markdown",
+    "*.njk": "html",
+    "*.svg": "html",
+    "*.tpl": "html",
+    ".editorconfig": "toml",
+    "editorconfig": "toml"
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 300,
+  "files.exclude": {
+    "**/.mypy_cache": true
+  },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.enabled": true,
+  "githubPullRequests.pullBranch": "never",
+  "problems.decorations.enabled": false,
+  "security.workspace.trust.banner": "never",
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "update.showReleaseNotes": false,
+  "vscode_custom_css.imports": [
+    "file:///Users/vanyauhalin/.config/vscode/custom.css"
+  ],
+  "window.autoDetectColorScheme": true,
+  "window.titleBarStyle": "native",
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "my-light",
+  "workbench.editor.decorations.badges": false,
+  "workbench.editor.decorations.colors": false,
+  "workbench.editor.showIcons": false,
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.iconTheme": null,
+  "workbench.layoutControl.enabled": false,
+  "workbench.preferredDarkColorTheme": "my-dark",
+  "workbench.preferredLightColorTheme": "my-light",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.tree.renderIndentGuides": "none",
+
+  //
+  // CSS
+  //
+
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "css.validate": false,
+  "stylelint.validate": [
+    "css"
+  ],
+
+  //
+  // GO
+  //
+
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": false
+    },
+    "editor.formatOnSave": false
+  },
+
+  //
+  // HTML
+  //
+
+  "html.autoClosingTags": true,
+
+  //
+  // JavaScript
+  //
+
+  "eslint.validate": [
+    "javascript",
+    "json",
+    "jsonc",
+    "typescript",
+    "typescriptreact",
+    "yaml"
+  ],
+  "javascript.autoClosingTags": true,
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.autoClosingTags": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.tsserver.log": "off",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  //
+  // Java
+  //
+
+  "java.inlayHints.parameterNames.enabled": "none",
+
+  //
+  // Markdown
+  //
+
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80,
+    "files.trimTrailingWhitespace": false
+  },
+
+  //
+  // PHP
+  //
+
+  "[php]": {
+    "editor.defaultFormatter": "obliviousharmony.vscode-php-codesniffer",
+    "editor.wordSeparators": "`-~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
+  "phpCodeSniffer.exec.osx": "vendor/bin/phpcs",
+  "phpCodeSniffer.standard": "Automatic",
+
+  //
+  // Python
+  //
+
+  "python.linting.lintOnSave": false,
+
+  //
+  // Ruby
+  //
+
+  "[ruby]": {
+    "editor.defaultFormatter": "Shopify.ruby-lsp"
+  },
+  "rubyLsp.enableExperimentalFeatures": false,
+  "rubyLsp.rubyVersionManager": "auto",
+  "rubyLsp.yjit": true,
+
+  //
+  // TOML
+  //
+
+  "evenBetterToml.schema.enabled": false,
+
+  //
+  // Unsorted
+  //
+}

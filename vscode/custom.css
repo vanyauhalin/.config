@@ -1,0 +1,31 @@
+.monaco-workbench .part > .content {
+  font-size: 12px !important;
+}
+
+.monaco-workbench .tab .label-name {
+  font-size: 12px !important;
+}
+
+.monaco-workbench .codicon {
+  font-size: 14px !important;
+}
+
+.monaco-editor .scroll-decoration {
+  display: none !important;
+}
+
+.statusbar .__CUSTOM_CSS_JS_INDICATOR_CLS {
+  display: none !important;
+}
+
+.quick-input-list
+.monaco-list[aria-label="Type the name of a symbol to go to."]
+.quick-input-list-rows {
+  margin-left: 0px !important;
+}
+
+.quick-input-list
+.monaco-list[aria-label="Type the name of a symbol to go to."]
+.codicon {
+  display: none !important;
+}
