@@ -10,6 +10,7 @@ function git
 		echo "----------------------"
 		echo ""
 		echo "Usage: remote-rename <current> <new>"
+		echo "       submodule-delete <path>"
 		echo ""
 		echo "Subcommands:"
 		echo "  clean-recursive     ."
@@ -19,6 +20,7 @@ function git
 		echo "  remote-update       Update remote origin."
 		echo "  s                   Show the working tree status."
 		echo "  show-diff           Print humanized differences in objects."
+		echo "  submodule-delete    Delete the submodule and its directory."
 		echo "  undo                Undo the last commit."
 
 	case clean-recursive
@@ -65,6 +67,22 @@ function git
 
 	case show-diff
 		command git show --ext-diff
+
+	case "submodule-delete*"
+		if not set --query argv[2]
+			echo "Error: The path to the submodule isn't specified."
+			return 1
+		end
+		set --local path $argv[2]
+
+		if not test -e .gitmodules
+			echo "Error: The command isn't executing near to the .gitmodules file."
+			return 1
+		end
+
+		command git submodule deinit --force $path
+		find .git/modules/$path -delete
+		command git rm --force $path
 
 	case undo
 		command git reset --soft HEAD~1

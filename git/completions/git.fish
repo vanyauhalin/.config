@@ -38,5 +38,10 @@ complete \
 complete \
 	--command git \
 	--condition __fish_use_subcommand \
+	--arguments submodule-delete \
+	--description "Delete the submodule and its directory"
+complete \
+	--command git \
+	--condition __fish_use_subcommand \
 	--arguments undo \
 	--description "Undo the last commit"
