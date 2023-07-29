@@ -4,7 +4,7 @@ complete \
 	--command brew \
 	--condition __fish_use_subcommand \
 	--arguments export \
-	--description "Export lists of manually installed formulae and casks"
+	--description "Export lists of installed formulae and casks"
 complete \
 	--command brew \
 	--condition __fish_use_subcommand \

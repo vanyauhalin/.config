@@ -8,7 +8,7 @@ function brew
 		command brew $argv
 		echo ""
 		echo "Additional subcommands:"
-		echo "  export              Export lists of manually installed formulae and casks."
+		echo "  export              Export lists of installed formulae and casks."
 		echo "  yolo                Run update, upgrade, autoremove and cleanup."
 
 	case autoremove cleanup "install*" "tap*" "uninstall*" "untap*" update "upgrade*"
@@ -19,34 +19,23 @@ function brew
 		set --local directory $XDG_CONFIG_HOME/homebrew
 
 		set --local casks_file $directory/casks
-		set --local casks (command brew list --cask --version)
-		set --local casks_content (string join "\n" $casks)
+		set --local casks_list (command brew list --cask)
+		set --local casks_export (
+			command brew info --cask $casks_list --json=v2 |
+			jq -r '.casks [] | "\(.full_token) \(.installed)"' |
+			sort
+		)
+		set --local casks_content (string join "\n" $casks_export)
 		echo -e $casks_content > $casks_file
 
-		set --local requested (command brew leaves --installed-on-request)
-		set --local formulae (command brew list --formula --version)
-		set --local export
-
-		for item in $requested
-			set --local exported
-
-			for formula in $formulae
-				set --local matched (string match "$item*" $formula)
-				if test $matched
-					set exported $matched
-					break
-				end
-			end
-
-			if test $exported
-				set --append export $exported
-			else
-				set --append export $item
-			end
-		end
-
 		set --local formulae_file $directory/formulae
-		set --local formulae_content (string join "\n" $export)
+		set --local formulae_list (command brew list --formula)
+		set --local formulae_export (
+			command brew info --formula $formulae_list --json=v2 |
+			jq -r '.formulae [] | "\(.full_name) \(.versions.stable)"' |
+			sort
+		)
+		set --local formulae_content (string join "\n" $formulae_export)
 		echo -e $formulae_content > $formulae_file
 
 	case yolo
