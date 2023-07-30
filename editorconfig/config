@@ -20,7 +20,7 @@ indent_size = 2
 indent_style = space
 
 # HTML
-[*.{erb,html,njk,svg}]
+[*.{erb,html,jsp,njk,svg,tpl,xml}]
 indent_size = 2
 indent_style = space
 
@@ -52,7 +52,7 @@ trim_trailing_whitespace = false
 
 # PHP
 [*.php]
-indent_size = 2
+indent_size = 4
 indent_style = space
 
 # Python
@@ -61,7 +61,7 @@ indent_size = 4
 indent_style = space
 
 # Ruby
-[*.{rb,ru}]
+[{*.{rb,ru},Gemfile,Rakefile}]
 indent_size = 2
 indent_style = space
 
