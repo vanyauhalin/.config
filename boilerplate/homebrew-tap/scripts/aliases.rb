@@ -5,9 +5,6 @@ require "pathname"
 require "semantic"
 require "sorbet-runtime"
 
-# https://github.com/sorbet/sorbet/issues/7170
-# rubocop:disable Style/TrailingUnderscoreVariable
-
 state = T.let({}, T::Hash[String, [Semantic::Version, String, String]])
 
 current_directory = Pathname.new(__dir__)
@@ -68,5 +65,3 @@ state.each_value do |_, output_basename, intput_basename|
   relative_input = input.relative_path_from(output_directory)
   output.make_symlink(relative_input)
 end
-
-# rubocop:enable Style/TrailingUnderscoreVariable

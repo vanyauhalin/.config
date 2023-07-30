@@ -49,3 +49,7 @@ Style/Next:
 
 Style/ParenthesesAroundCondition:
   Enabled: false
+
+# https://github.com/sorbet/sorbet/issues/7170
+Style/TrailingUnderscoreVariable:
+  Enabled: false
