@@ -16,4 +16,4 @@ lint: #     Lint the code.
 
 .PHONY: aliases
 aliases: #  Generate aliases.
-	@ruby makefile.rb aliases
+	@ruby ./scripts/aliases.rb
