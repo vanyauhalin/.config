@@ -1,4 +1,4 @@
 [tools]
-go = "1.20.6"
-node = "20.5.0"
-python = "3.11.4"
+go = "latest"
+node = "latest"
+python = "latest"
