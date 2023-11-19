@@ -1,6 +1,5 @@
 cache=${XDG_CACHE_HOME}/npm
 cafile=/etc/ssl/cert.pem
-init-module=${XDG_CONFIG_HOME}/npm/config/npm-init.js
 
 ; The prefix is controlled by rtx and changes when the version of Node changes.
 ; It's already respects XDG.
